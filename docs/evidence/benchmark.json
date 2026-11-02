@@ -1,0 +1,19 @@
+{
+  "measuredAt": "2026-11-02T10:43:35.848Z",
+  "browser": "156.0.8078.4",
+  "platform": "win32",
+  "cpu": "13th Gen Intel(R) Core(TM) i5-13600K",
+  "kdf": {
+    "algorithm": "argon2id",
+    "memoryKiB": 65536,
+    "iterations": 3,
+    "parallelism": 4
+  },
+  "createMs": 209.4,
+  "unlockMs": 183.4,
+  "encrypt1000Ms": 49.7,
+  "decrypt1000Ms": 31.6,
+  "searchMedianMs": 0.1,
+  "entries": 1000,
+  "note": "One synthetic local benchmark run, including worker/RPC overhead; not a cross-device performance guarantee."
+}

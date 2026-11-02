@@ -1,0 +1,10 @@
+node_modules
+dist
+apps/web/dist
+.local
+package-lock.json
+test-results
+playwright-report
+coverage
+docs/screenshots
+docs/demo.webm

@@ -1,0 +1,18 @@
+{
+  "performedAt": "2026-11-02T10:44:42.467Z",
+  "database": "PostgreSQL 18",
+  "durationMs": 1779,
+  "sourceDestroyedBeforeRestore": true,
+  "restoredEncryptedEntries": 1,
+  "decryptedFieldsVerified": [
+    "title",
+    "website",
+    "username",
+    "password",
+    "notes",
+    "favorite",
+    "category"
+  ],
+  "disposableDatabasesOnly": true,
+  "result": "passed"
+}

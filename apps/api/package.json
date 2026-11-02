@@ -1,0 +1,8 @@
+{
+  "name": "@vaultline/api",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@vaultline/contracts": "*"
+  }
+}

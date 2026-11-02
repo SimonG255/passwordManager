@@ -1,0 +1,14 @@
+node_modules/
+dist/
+apps/web/dist/
+.env
+.env.*
+!.env.example
+!.env.production.example
+.local/
+apps/api/src/generated/
+test-results/
+playwright-report/
+coverage/
+*.log
+*.vaultline

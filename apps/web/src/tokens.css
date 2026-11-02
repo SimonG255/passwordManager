@@ -1,0 +1,11 @@
+:root {
+  --canvas: #f8f9f5;
+  --ink: #303c2d;
+  --muted: #68725e;
+  --border: #e6eadf;
+  --accent: #d0e6ac;
+  --font:
+    'Segoe UI Variable Text', 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --mono: 'Cascadia Code', 'SFMono-Regular', Consolas, monospace;
+  color-scheme: light;
+}

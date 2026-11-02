@@ -1,0 +1,12 @@
+node_modules
+.git
+.env
+.env.*
+.local
+dist
+apps/web/dist
+test-results
+playwright-report
+coverage
+docs/screenshots
+docs/demo.webm

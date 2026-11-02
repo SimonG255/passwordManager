@@ -1,0 +1,43 @@
+# Local development stack. See docs/runbook.md for production role/TLS requirements.
+services:
+  db:
+    image: postgres:18-bookworm
+    environment:
+      POSTGRES_USER: vaultline
+      POSTGRES_PASSWORD: local-development-only
+      POSTGRES_DB: vaultline
+    ports:
+      - '127.0.0.1:54329:5432'
+    volumes:
+      - vaultline-data:/var/lib/postgresql
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U vaultline -d vaultline']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  migrate:
+    build:
+      context: .
+      target: build
+    environment:
+      DATABASE_URL: postgresql://vaultline:local-development-only@db:5432/vaultline
+    command: ['npm', 'run', 'db:migrate']
+    depends_on:
+      db:
+        condition: service_healthy
+  app:
+    build:
+      context: .
+      target: runtime
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://vaultline:local-development-only@db:5432/vaultline
+      APP_ORIGIN: http://localhost:3001
+      RP_ID: localhost
+    ports:
+      - '127.0.0.1:3001:3001'
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+volumes:
+  vaultline-data:
